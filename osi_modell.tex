@@ -1,0 +1,58 @@
+\node (17) at (0,9)    [rechteck, fill=blue!35] {};
+\node at (0,9) {\small \textbf{Anwendungsschicht}};
+\node (16) at (0,7.5)  [rechteck, fill=blue!30] {};
+\node at (0,7.5) {\small \textbf{Darstellungsschicht}};
+\node (15) at (0,6)    [rechteck, fill=blue!25] {};
+\node at (0,6) {\small \textbf{Kommunikationssteuerungsschicht}};
+\node (14) at (0,4.5)  [rechteck, fill=blue!20] {};
+\node at (0,4.5) {\small \textbf{Transportschicht}};
+\node (13) at (0,3)    [rechteck, fill=blue!15] {};
+\node at (0,3) {\small \textbf{Vermittlungsschicht}};
+\node (12) at (0,1.5) [rechteck, fill=blue!10] {};
+\node at (0,1.6) {\parbox{6cm}{\centering \small \textbf{Sicherungsschicht}\\
+  \footnotesize Logical Link Control\\
+  \footnotesize \textbf{Media Access Control}}
+};
+\node (11) at (0,0)    [rechteck, fill=blue!5]  {};
+\node at (0,0) {\small \textbf{Bit\"ubertragungsschicht}};
+
+\node (27) at (8,9)    [rechteck, fill=blue!35] {};
+\node at (8,9) {\small \textbf{Application Layer}};
+\node (26) at (8,7.5)  [rechteck, fill=blue!30] {};
+\node at (8,7.5) {\small \textbf{Presentation Layer}};
+\node (25) at (8,6)    [rechteck, fill=blue!25] {};
+\node at (8,6) {\small \textbf{Session Layer}};
+\node (24) at (8,4.5)  [rechteck, fill=blue!20] {};
+\node at (8,4.5) {\small \textbf{Transport Layer}};
+\node (23) at (8,3)    [rechteck, fill=blue!15] {};
+\node at (8,3) {\small \textbf{Network Layer}};
+\node (22) at (8,1.5) [rechteck, fill=blue!10] {};
+\node at (8,1.6) {\parbox{6cm}{\centering \small \textbf{Data Link Layer}\\
+  \footnotesize Logical Link Control Sublayer\\
+  \footnotesize \textbf{Media Access Control Sublayer}}
+};
+\node (21) at (8,0) [rechteck, fill=blue!5] {};
+\node at (8,0) {\small \textbf{Physical Layer}};
+
+\draw[<->,thick,dashed] (17) -- (27);
+\draw[<->,thick,dashed] (16) -- (26);
+\draw[<->,thick,dashed] (15) -- (25);
+\draw[<->,thick,dashed] (14) -- (24);
+\draw[<->,thick,dashed] (13) -- (23);
+\draw[<->,thick,dashed] (12) -- (22);
+\draw[<->,thick,dashed] (11) -- (21);
+
+\node at (4,.25)  {1};
+\node at (4,1.75) {2};
+\node at (4,3.25) {3};
+\node at (4,4.75) {4};
+\node at (4,6.25) {5};
+\node at (4,7.75) {6};
+\node at (4,9.25) {7};
+
+\draw[<->,thick] (-3.5,9) -- (-3.5,-1.25) -- (11.5,-1.25) -- (11.5,9);
+
+\draw[<->,thick,dashed] (-2.5,-2) -- (2.5,-2);
+\node at (0,-1.75) {\small Virtuelle Protokolle der Schichten};
+\draw[<->,thick,] (5.5,-2) -- (10.5,-2); 
+\node at (8,-1.75) {\small Tats\"achlicher Transport};

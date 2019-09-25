@@ -1,0 +1,20 @@
+\documentclass{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.4}
+\begin{document}
+
+\begin{figure}
+  \centering
+  \begin{tikzpicture}
+    \newcommand*\radius{1}
+    \newcommand*\Radius{6}
+    \begin{axis}
+      \addplot3[surf, x=1cm,y=1cm,z=5cm,domain=0:2*pi,z buffer=sort,opacity=0.75]
+         ({(\Radius + \radius * cos(deg(y))) * cos(deg(x))},
+         {(\Radius + \radius * cos(deg(y))) * sin(deg(x))},
+         {\radius * sin(deg(y))});
+    \end{axis}
+  \end{tikzpicture}
+  \caption{Torus}
+\end{figure}
