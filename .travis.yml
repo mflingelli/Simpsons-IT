@@ -15,7 +15,7 @@ script:
 - pdflatex Simpsons-IT.tex
 deploy:
   provider: releases
-  api_key: $GITHUB_TOKEN
+  api_key: "$GITHUB_TOKEN"
   file: Simpsons-IT.pdf
   skip_cleanup: true
   draft: false
@@ -26,4 +26,4 @@ deploy:
     branch: master
 env:
   global:
-    secure: BXzD8dy8olNp4VJYiMmEnvSfLqYDN5g/nu9jJWRycSp64Z2OPh7x/eZuV4Hg+0e09Mt0Xsj4SkSnd0qsNlxOUhgHw4DXPVwhakgPP/G/CqbqPZVGbEBSVTpchadXPhS3XEY3W4L7qASI4mfC27yGD6kEHSn1mC4nvKrotj/bMJdPs+Sx7jYnZ6Rjic4+4OHcgG2y/WfHfIBj5tnyc1Hlakce3nMhIEQXeSHzOcNtzZe80l4mKJGT9qOpYJW6NcHMVmBBOavBYJOgQInC70X4bOx9q21kCXOoQrLEtXEWaF7GjWHNxeW0N2gBJVn44u0025Z8pyolsvKi4aVYgncQbgp1djM9MUHTeXxA7CTmu136Nahd/VJtGWjZ4FDsrOKY8orXyb57yLVdJeuHbNBxWWBW/f710x9yOBhegcLzpAkQJsdl81bjIIe/KcbWniIbmEJ3VeKh4GqnHoaivVnFnsTeXEjtT0pvwnqdBpH3shhjlG/s5DI2l7vRWZz4A0r0aZip/xG6Qjd9t+vk8WYgG4/vy4oiAIdJNio0mjx14Mmb/6a3zK4JDe41LvLkccoeN2bWHxTaEE7mcyEHfp5mi9is5n/+MAnVD1nrmzPJ+puiNBuXphIkszEdW7VEllSfB/QFnkBwbzdJOPAQf+eDjSHc/Cl98V48j1Ojm9l/3u0=
+    secure: lxY8+dPdb+8bsgXrJF9/yvznzHsMbk6iieTVIuXgVDzazg+MeSzseivL9Yns0KDoLucRiFGHgRkpyOlRJ0looVETW0jRzvW6YAQ2Fms/cO+R/z9AKnT2joC9wX9hkz2sHSqFowddw1SBctU1zbW9nBtUAxoGgfI0fyzedtn8TteEcwdaB6zkUU0LqQLRn2dAzdOWH+hT/lFvzZ0F+IzVdqcEuT7u9PldMV6h+ywIUDwz2S/bg7ePVBw8/Um0tXSML4BDhWZT567W02OGpwf3EhQ/KvJEl2K0qfTXYmDszmAtCFVWv0K+lPrHC//nCOxGs5bHbfd0Y/AC19YonLovQ7Z/Zqki3k7oe/CWQLLRxbBJOMybDqMG0HCfogp04sUaEyQquAjJJXxDgenaofOnxmtWujbjaqfWeNu2xNqR7qVFBwFQD64hAhfhoY5/J2WOy6d1PopcyXPINRhPFMBhgg8si8Bies6cNhUiZBq6tgtxkeAB3pRz6cVB/+KPFqDd1yTcQAp4g3+HQ99nF/A9kRe8PCnfuUMjeLdPMtzXesvCckS+cTMF3m5XSxc42K6+wQ5BHaBdWCb5vWREwawGxAvQDdqhJ85ejk9O+jyhlwj0z+OROx1El+kDtu3gPddYx6rfWlSl3grH64wepnhNWqFqKEpOyTytlG/EqUbq2kM=
