@@ -1,5 +1,6 @@
 sudo: required
-dist: trusty
+language: ruby
+dist: bionic
 before_install:
 - sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 6B05F25D762E3157
 - sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-fonts-recommended
