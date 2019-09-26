@@ -15,6 +15,18 @@
   outer/numbering=none
 ]{metropolis}
 
+\makeatletter
+\setlength{\metropolis@titleseparator@linewidth}{2pt}
+\setlength{\metropolis@progressonsectionpage@linewidth}{2pt}
+\setlength{\metropolis@progressinheadfoot@linewidth}{2pt}
+\makeatother
+
+\definecolor{SimpsonsYellow}{RGB}{255,217,15}
+
+\setbeamercolor{progress bar in head/foot}{fg=SimpsonsYellow}
+\setbeamercolor{title separator}{fg=SimpsonsYellow}
+\setbeamercolor{frametitle}{fg=black,bg=SimpsonsYellow}
+
 \title{The Simpsons meet IT}
 \subtitle{Was wir von den Simpsons und Futurama über Mathematik, Kryptografie, IT und Quantenphysik lernen können}
 \author{ Dipl.-Inform. (univ.) Markus M. Flingelli}
@@ -1232,7 +1244,7 @@ i\hbar \frac{\partial \Psi}{\partial t} = -\frac{\hbar^2}{2m}
 	\frametitle{Literaturverzeichnis}
 
 \begin{thebibliography}{99999}
-	\bibitem[FLI]{MF} Markus Flingelli: \textit{Hier sind die Simpsons}, 9. überarbeitete Ausgabe, April 2016
+	\bibitem[FLI]{MF} Markus Flingelli: \textit{Hier sind die Simpsons}, 11. überarbeitete Ausgabe, Mai 2018, \href{https://github.com/mflingelli/simpsons/blob/development/pdfs/simpsons_v11_2018.pdf}{\url{https://github.com/mflingelli/simpsons/blob/development/pdfs/simpsons\_v11\_2018.pdf}}
 	\bibitem[GGW]{GG} Tom Georgoulias, Sarah J. Greenwald und Marc Wichterich: \textit{Futurama $\pi$k -- Mathematics in the year 3000}, Math Horizons, Volume 11, Number 4, April 2004, pp. 12-15
 	\bibitem[GRE]{SG} Sarah J. Greenwald: \textit{Klein's Beer: Futurama Comedy and Writers in the Classroom}, 2007
 	\bibitem[SIN]{SS} Simon Singh: \textit{Homers letzter Satz}, Carl Hanser Verlag, München, 2013
@@ -1244,7 +1256,7 @@ i\hbar \frac{\partial \Psi}{\partial t} = -\frac{\hbar^2}{2m}
   \bibitem[BOE]{BOE} Harald Bögeholz: \textit{Zahlen, bitte! Fermats letzter Satz, Andrew Wiles und die Simpsons}, heise online, 11. April 2017, \href{https://www.heise.de/newsticker/meldung/Zahlen-bitte-Fermats-letzter-Satz-Andrew-Wiles-und-die-Simpsons-3678787.html}{\url{https://www.heise.de/newsticker/meldung/Zahlen-bitte-Fermats-letzter-Satz-Andrew-Wiles-und-die-Simpsons-3678787.html}}
   \bibitem[COO]{COO} Stephen Cook: \textit{The P versus NP problem}, \href{http://www.claymath.org/sites/default/files/pvsnp.pdf}{\url{http://www.claymath.org/sites/default/files/pvsnp.pdf}}
   \bibitem[FIS]{FIS} Sebastian Fischer: \textit{Stoibers Glaubensgipfel}, Spiegel Online, Juni 2006, \href{http://www.spiegel.de/politik/deutschland/0,1518,419948,00.html}{\url{http://springfield-shopper.de/Information/whoiswho_bewohner.shtml}}
-  \bibitem[FLI]{MF} Markus Flingelli: \textit{Hier sind die Simpsons}, 9. überarbeitete Ausgabe, April 2016
+  \bibitem[FLI]{MF} Markus Flingelli: \textit{Hier sind die Simpsons}, 11. überarbeitete Ausgabe, Mai 2018, \href{https://github.com/mflingelli/simpsons/blob/development/pdfs/simpsons_v11_2018.pdf}{\url{https://github.com/mflingelli/simpsons/blob/development/pdfs/simpsons\_v11\_2018.pdf}}
   \bibitem[GGW]{GG} Tom Georgoulias, Sarah J. Greenwald und Marc Wichterich: \textit{Futurama $\pi$k -- Mathematics in the year 3000}, Math Horizons, Volume 11, Number 4, April 2004, pp. 12-15
   \bibitem[GRE]{SG} Sarah J. Greenwald: \textit{Klein's Beer: Futurama Comedy and Writers in the Classroom}, 2007
   \bibitem[SIN]{SS} Simon Singh: \textit{Homers letzter Satz}, Carl Hanser Verlag, München, 2013
@@ -1254,11 +1266,11 @@ i\hbar \frac{\partial \Psi}{\partial t} = -\frac{\hbar^2}{2m}
 }
 
 \only<presentation>{
-	\begin{frame}
+\begin{frame}
 	\frametitle{Fragen?}
 	\begin{figure}[ht]
 		\centering
-		\includegraphics[height=.825\textheight]{homer_pythagoras.png}
+		\includegraphics[height=.75\textheight]{homer_pythagoras.png}
 	\end{figure}
 	\scriptsize{Quelle: \href{https://vividkaret.files.wordpress.com/2014/10/homer.png}{\url{https://vividkaret.files.wordpress.com/2014/10/homer.png}}}
 \end{frame}
