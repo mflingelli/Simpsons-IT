@@ -19,6 +19,9 @@ deploy:
   api_key:
     secure: C2uM6y1PRMXWH0iCNxMfbi/w5XefJU7YCpD9PCWWbPjpwDpfYcJfpgG23umlMKR/VIf0+gd3F20e4dyRF54hot9iTogLu0GjI2gyf5Kyw2UuyUTeXkYRKe+6C2NuN4sVzQqKTDbk3Cz8Za538MR+Zob+Yes0pb7eDmem+vbvvBAskeppEDdrULodJCp4+6K4he7Q/Bp7mxUnSuoeP3zaOffloDdAA2GGL3PtvRvv3BOBuG0nbeqzuEqXilL2/InExDDYRYeiIEra0GHjoqb0prms/1k9jI2gGesQ3T6CcXibUWmK/GRqJDsSwkSo6AStkMQtqhALB6U7KbyS+uZFwDUVtXIg9lLOvT01EPnWyYeI65P9PgrW7T3GBQS7z2rAYQ2czh2BOLrUdr2EAX3czdc6C0leTaAR+G9XpLE4e4By89UidizmYXCA0Zxp6JEeiKBkffWdv9pxvaTmgh3Lk+JRMW2mIkuZzm9WlJ3WmrxPp7ZVUIK982CtTK7dXpydnOFg1mDFhgicInVRQ5NsdvAIJ65Eh/W7V31C7gd424dpj8J9vdUS1GNNsmmML4H05RYJpVjlT4mwgZdYbADpySPUEG0OXb+NHmbTY/fg0B0CGMg2dCsuyUelrfxNVvah1u5snl7SBPUY1+2KedmWii1X89vCx2eaPj8N8CeZUck=
   file: Simpsons-IT.pdf
+  skip_cleanup: true
+  draft: false
+  overwrite: true
   on:
     tags: true
     repo: mflingelli/Simpsons-IT
