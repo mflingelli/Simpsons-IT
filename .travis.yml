@@ -1,4 +1,9 @@
 language: ruby
+rvm:
+  - 2.5
+  - 2.6
+  - jruby
+  - truffleruby
 os: linux
 dist: xenial
 before_install:
