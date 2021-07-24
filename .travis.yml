@@ -25,6 +25,7 @@ deploy:
     - Simpsons-IT_article.pdf
   skip_cleanup: true
   draft: false
+  prerelease: true
   overwrite: true
   on:
     tags: true
