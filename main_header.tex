@@ -1,0 +1,80 @@
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8x]{inputenc}
+\usepackage{color}
+\usepackage{colortbl}
+\usepackage{listings}
+\usepackage{longtable}
+\usepackage{tikz}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{pgfplots}
+\usetikzlibrary{shapes, calc}
+\usetheme[
+  outer/progressbar=foot,
+  outer/numbering=none
+]{metropolis}
+
+\def\datengerman{\def\today{\ifnum\day<10 0\fi\number\day.\ifnum\month<10 0\fi\number\month.\number\year}}
+\date{\today}
+
+\newcommand{\befehl}[1]{\ttfamily #1\sf}
+
+\DeclareMathOperator{\e}{e}
+\newcommand{\iu}{{\mathrm{i}\mkern1mu}}
+
+\definecolor{SimpsonsYellow}{RGB}{255,217,15}
+
+\setbeamercolor{progress bar in head/foot}{fg=SimpsonsYellow}
+\setbeamercolor{title separator}{fg=SimpsonsYellow}
+\setbeamercolor{frametitle}{fg=black,bg=SimpsonsYellow}
+
+\title{The Simpsons meet IT}
+\subtitle{Was wir von den Simpsons und Futurama über Mathematik, Kryptografie, IT und Quantenphysik lernen können}
+
+
+\only<article>{
+  \publishers{\textcopyright\ Markus Flingelli, 2016 - \the\year}
+}
+
+\only<article>{
+  \hypersetup{
+  pdftitle = {The Simpsons meet IT -- Was wir von den Simpsons und Futurama über Mathematik, Kryptografie, IT und Quantenphysik lernen können},
+  pdfsubject = {},
+  pdfkeywords = {Simpsons, IT, Mathematik, Informatik, Physik},
+  pdfauthor = {\textcopyright\ Markus Flingelli, 2016 - \the\year},
+  pdfcreator = {\LaTeX\ u.a. mit dem Paket \flqq hyperref\frqq},
+  pdfproducer = {pdfeTeX-0.\the\pdftexversion\pdftexrevision},
+  }
+}
+
+\hypersetup{colorlinks=true, linkcolor=black, urlcolor=blue}
+
+\definecolor{Titelfarbe}{RGB}{245,255,250}
+\definecolor{Titelhintergrundfarbe}{RGB}{255,217,15}
+\definecolor{ivory}{RGB}{255,255,240}
+\definecolor{basicGreen}{RGB}{0,140,0}
+\definecolor{basicRed}{RGB}{128,0,0}
+
+\theoremstyle{plain}
+\newtheorem{lem}{Lemma}
+
+\lstdefinestyle{base}{
+  language={[Visual]Basic},
+  emptylines=1,
+  breaklines=true,
+  basicstyle=\ttfamily\color{basicRed},
+  moredelim=**[is][\color{basicGreen}]{@}{@},
+}
+
+\AtBeginSection[]
+{
+  \begin{frame}<beamer>
+    \frametitle{Gliederung}
+    \tableofcontents[sections={\thesection}]
+  \end{frame}
+  \begin{frame}<handout>
+    \frametitle{Gliederung}
+    \tableofcontents[sections={\thesection}]
+  \end{frame}
+}

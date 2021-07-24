@@ -1,4 +1,4 @@
-\author{\bf Dipl.-Inform. (univ.) Markus M. Flingelli}
+\author{\bf Markus \glqq Flingo\grqq\ Flingelli}
 \begin{document}
 
 \only<article>{
@@ -19,22 +19,6 @@
   \newpage
   \setcounter{page}{0}
   \pagenumbering{arabic}
-}
-
-\section{Linux}
-
-\begin{frame}[fragile]
-\only<presentation>{
-	\frametitle{Linux}
-}
-\begin{block}{Hölle, Tod und Geister}
-\begin{lstlisting}[language=Bash]
-cat westerbrook > /dev/null
-\end{lstlisting}
-\end{block}
-\end{frame}
-\note{
-Halloween-Folge der 26. Staffel (Treehouse of Horror XXV)
 }
 
 \section{Mathematik}
@@ -140,6 +124,22 @@ Datei mit der ersten Million Nachkommastellen von $\pi$: \href{http://www.aip.de
 		\item Im Film Zurück in die Zukunft III nennt Dr. Brown die Chance seine Frau zu treffen 1 zu Googolplex.
 		\item In einem Peanuts-Comic erklärt Schroeder seiner Verehrerin Lucy, dass die Chancen für ihre Heirat 1 zu Googol stehen.
 	\end{itemize}
+\end{itemize}
+}
+
+\frame{
+\frametitle{Primzahl}
+\begin{block}{Definition:}
+Primzahl ist eine natürliche Zahl, die größer als 1 und ausschließlich durch sich selbst und durch 1 teilbar ist.
+\end{block}
+}
+
+\note{
+Offene Fragen:
+\begin{itemize}
+	\item Gibt es unendlich viele Primzahlzwillinge, also Primzahlen, deren Differenz 2 ist (z.B. 17 und 19)?
+	\item Gibt zwischen zwei Quadratzahlen stets mindestens eine Primzahl? (Vermutung von Legendere)
+	\item Ist eine gerade Zahl größer als 2 immer als Summe zweier Primzahlen darstellbar (z.B. 100=47+53)? (Vermutung von Goldbach)
 \end{itemize}
 }
 
@@ -601,80 +601,6 @@ Sei $n > 2$ eine natürliche Zahl, dann gibt es keine von Null verschiedenen nat
 \end{align*}
 }
 
-\subsection{Mengenlehre}
-
-\frame{
-\frametitle{Aleph-Funktion}
-\begin{block}{Definition:}
-\begin{itemize}
-	\item Aufzählung aller unendlichen Kardinalzahlen
-	\item Rekursive Definition:
-\end{itemize}
-\begin{align*}
-	\aleph_0 &= \mbox{kleinste unendliche Kardinalzahl}\\
-	\aleph_{\alpha +1} &= \mbox{kleinste Kardinalzahl, die größer als}\ \aleph_0\ \mbox{ist}\\
-	\aleph_{\alpha} &= \sup \left\{\aleph_{\beta}\mbox{;}\ \beta \le \alpha \right\} \mbox{für Limes-Ordinalzahlen}\ \alpha
-\end{align*}
-\end{block}
-}
-
-\frame{
-\only<presentation>{
-	\frametitle{Aleph-Funktion}
-}
-\begin{block}{Beispiele:}
-\begin{itemize}
-	\item $\aleph_0$: $\mathbb{N}$
-	\item $\aleph_0$: $\mathbb{Q}$ (obwohl $\mathbb{N}\subset \mathbb{Q}$)
-	\item $\aleph_1$: $\mathbb{R}$
-\end{itemize}
-\end{block}
-}
-
-\frame{
-\frametitle{Mächtigkeit}
-\begin{block}{}
-\begin{itemize}
-  \item Kardinalzahlen sind in der Mathematik eine Verallgemeinerung der natürlichen Zahlen zur Beschreibung der Mächtigkeit, auch Kardinalität, von Mengen.
-  \item Zwei Mengen $X$ und $Y$ heißen gleichmächtig, wenn es eine Bijektion von $X$ nach $Y$ gibt; man schreibt dann $\left|X\right| = \left|Y\right|$ 
-  \item Die Gleichmächtigkeit von Mengen ist eine Äquivalenzrelation auf der Klasse aller Mengen.
-\end{itemize}
-\end{block}
-}
-
-\note{
-\begin{itemize}
-	\item Mengen $\mathbb{N}$, $\mathbb{Z}$, $\mathbb{P}$ und $\mathbb{Q}$ sind abzählbar unendlich
-	\item Mengen $\mathbb{R}$ und $\mathbb{C}$ sind überabzählbar unendlich
-	\item Gedankenexperiment Hilberts Hotel:
-	\begin{itemize}
-		\item Hotel mit unendlich vielen Zimmern (durchnummeriert mit natürlichen Zahlen bei 1 beginnend)
-		\item Hotel ist mit unendlich vielen Gästen belegt, trotzdem können abzählbar unendlich viele Neuankömmlinge aufgenommen werden: Alle Zimmer mit geraden Zimmernummern werden freigemacht und neue Gäste wird in diesen untergebracht
-	\end{itemize}
-\end{itemize}
-}
-
-\frame{
-\only<presentation>{
-	\frametitle{Aleph-Funktion}
-}
-\begin{block}{Wie ein wilder Bender}
-\begin{itemize}
-	\item Name eines Kinos in NNY: Loew's $\aleph_0$-Plex
-	\item Filme im Kino, u.a.
-	\begin{itemize}
-		\item Galaxy Wars
-		\item It Came from Planet Earth
-		\item Planet of the Clams
-	\end{itemize}
-\end{itemize}
-\end{block}
-}
-
-\note{
-Im Skript zur Folge fand sich die Anmerkung, dass das Kino immer noch zu wenige Kinosäle hätte, um Rocky mit allen Fortsetzungen gleichzeitig zu zeigen.
-}
-
 \subsection{Analysis}
 
 \frame{
@@ -893,102 +819,6 @@ mod 26    & 1 & 5 & 18 & 21 & 25 & 16 &  4 & 14\\\hline
 
 \only<article>{
   \newpage
-}
-\subsection{Programmiersprachen}
-
-\frame{
-\only<presentation>{
-	\frametitle{Fortran}
-}
-\begin{block}{Der Mann, der als Dinner kam}
-\begin{itemize}
-	\item Simpsons werden auf den Planeten Riegel 7 entführt
-	\item Bewohner des Planeten behaupten, Fortran sei die beste Programmiersprache
-	\item Fortran gilt als die erste jemals tatsächlich realisierte höhere Programmiersprache
-	\item Fortran geht auf Vorschlag aus 1953 von John Backus zurück
-\end{itemize}
-\end{block}
-}
-
-\begin{frame}
-\only<presentation>{
-	\frametitle{Fortran}
-}
-\begin{figure}[ht]
-	\centering
-	\only<presentation>{
-		\includegraphics[width=.75\textwidth]{old_fortran.png}
-	}
-	\only<article>{
-	  \includegraphics[width=.6\textwidth]{old_fortran.png}
-	}
-\end{figure}
-\scriptsize{Quelle: \href{http://www.conquermaths.com/news/images/futfortran.jpg}{\url{http://www.conquermaths.com/news/images/futfortran.jpg}}}
-\end{frame}
-
-\begin{frame}[fragile]
-\frametitle{BASIC}
-\begin{block}{Wohnungssuche in Neu-New York}
-\begin{itemize}
-	\item Fry beschließt, bei Bender einzuziehen
-	\item In Benders Wohnung hängt Stickbild mit folgendem Text:
-\end{itemize}
-\begin{lstlisting}[style=base]
-@10@ HOME
-@20@ SWEET
-@30@ GOTO 10
-\end{lstlisting}
-\end{block}
-\end{frame}
-
-\frame{
-\only<presentation>{
-	\frametitle{C+++}
-}
-\begin{block}{Mensch gegen Maschine}
-\begin{itemize}
-	\item In Springfield entsteht eine Schule mit Schwerpunkt auf den MINT-Fächern
-	\item Der \glqq Algorithmus\grqq\ bereitet Schüler auf zukünftige Aufgaben vor und empfiehlt den hochbegabten Schülern \glqq Programming with C+++\grqq
-\end{itemize}
-\end{block}
-}
-
-\subsection{Komplexitätstheorie}
-\frame{
-\only<presentation>{
-	\frametitle{Komplexitätstheorie}
-}
-\begin{block}{$\mbox{Homer}^3$}
-Es wird behauptet, dass Folgendes gilt:
-\[P = NP\]
-\end{block}
-}
-
-\frame{
-\frametitle{P-NP-Problem}
-\begin{block}{}
-\begin{itemize}
-	\item In welcher Beziehung stehen Komplexitätsklassen $P$ und $NP$ zueinander
-	\begin{itemize}
-		\item $P$: polynomial
-		\item $NP$: nichtdeterministisch polynomial
-	\end{itemize}
-	\item Eines der wichtigsten ungelösten Probleme der Informatik
-	\only<presentation>{
-		\item Vom \href{http://www.claymath.org/}{Clay Mathematics Institute} in die Liste der Millennium-Probleme aufgenommen
-	}
-	\only<article>{
-		\item Vom \href{http://www.claymath.org/}{Clay Mathematics Institute} in die Liste der Millennium-Probleme aufgenommen \cite{COO}
-	}
-\end{itemize}
-\end{block}
-}
-
-\note{
-\begin{itemize}
-	\item Probleme der Klasse $P$ lassen sich einfach lösen (z.B. Multiplikation)
-	\item Probleme der Klasse $NP$ sind schwer lösbar, aber leicht zu verifizieren (z.B. Zerlegung in Primfaktoren)
-\end{itemize}
 }
 
 \subsection{Internet}

@@ -1,0 +1,21 @@
+\makeatletter
+\only<article>{
+  \ifthispageodd{
+  }{
+    \newpage
+    \null
+  }
+  \clearpage
+  \newpage
+  \thispagestyle{empty}
+  \pagecolor{Titelhintergrundfarbe}\afterpage{\nopagecolor}
+  \vspace*{175mm}
+  \linespread{1.25}
+  \begin{flushright}
+    \large\textcolor{blue}{Ersteller: \@author}\\
+    \large\textcolor{blue}{Letzte \"Anderung: \@date}\\
+    \large\textcolor{blue}{\@publishers}
+  \end{flushright}
+  \linespread{1}
+}
+\makeatother

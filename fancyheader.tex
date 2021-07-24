@@ -1,0 +1,116 @@
+\usepackage[a4paper,head=1.5cm,bottom=2.5cm,left=25mm,right=25mm]{geometry}
+\usepackage[colorlinks=true,
+        linkcolor=black,
+        citecolor=black,
+        filecolor=black,
+        pagecolor=black,
+        urlcolor=black,
+        bookmarks=true,
+        bookmarksopen=true,
+        bookmarksopenlevel=3,
+        plainpages=false,
+        pdfpagelabels=true]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{watermark}
+\usepackage{scrextend}
+
+\setcounter{page}{1}
+\pagenumbering{roman}
+
+\pagestyle{fancy}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+\fancyhf{}
+\fancyhead[LO,RE]{\bfseries\thepage}
+\fancyhead[LE,RO]{\bfseries\rightmark}
+\fancyfoot[C]{}
+\pagestyle{fancy}
+\usepackage{sectsty}
+\usepackage{afterpage}
+
+%\renewcommand{\labelitemi}{\textcolor{ffDarkGray}{$\blacksquare$}}
+%\renewcommand{\labelitemii}{\textcolor{ffMediumGray}{$\circ$}}
+%\renewcommand{\labelitemiii}{\textcolor{ffLightGray}{$\cdot$}}
+%\renewcommand{\labelitemiv}{\textcolor{ffLightGray}{$\ast$}}
+
+
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+\newif\ifshowonlynotes
+\showonlynotesfalse
+
+
+\makeatletter
+\newif\ifbeamer@inlecture\beamer@inlecturetrue
+\def\beamer@currentmode{beamer}
+\input{beamerbasenotes.sty}
+\def\beamer@currentmode{article}
+
+\renewcommand\beamer@outsideframenote[2][]{%
+  \def\beamer@noteenvstart{}%
+  \def\beamer@noteenvend{}%
+  \setkeys{beamernotes}{#1}%
+  \par
+  \beamer@noteenvstart\textit{#2}\beamer@noteenvend%
+  \par
+}
+
+\setbeamertemplate{frame begin}{\beamer@framenotesbegin}
+\setbeamertemplate{frame end}{\beamer@setupnote\beamer@notesactions}
+
+\ifshowonlynotes
+  \let\beamer@dosingleframe=\beamer@donoframe
+  \g@addto@macro\beamer@endframe{\usebeamertemplate{frame end}}
+\fi
+
+\def\note{%
+  \ifbeamer@inframe%
+    \let\next=\beamer@inframenote%
+  \else%
+    \par
+    \begingroup
+      \leftskip=0mm
+      \noindent \textbf{Anmerkung:}
+      \par
+    \endgroup
+    \let\next=\beamer@outsideframenote%
+  \fi%
+  \next}
+\makeatother
+
+\makeatletter
+\renewenvironment{thebibliography}[1]
+     {\@mkboth{\MakeUppercase\bibname}{\MakeUppercase\bibname}%
+      \list{\@biblabel{\@arabic\c@enumiv}}%
+           {\settowidth\labelwidth{\@biblabel{#1}}%
+            \leftmargin\labelwidth
+            \advance\leftmargin\labelsep
+            \@openbib@code
+            \usecounter{enumiv}%
+            \let\p@enumiv\@empty
+            \renewcommand\theenumiv{\@arabic\c@enumiv}}%
+      \sloppy
+      \clubpenalty4000
+      \@clubpenalty \clubpenalty
+      \widowpenalty4000%
+      \sfcode`\.\@m}
+     {\def\@noitemerr
+       {\@latex@warning{Empty `thebibliography' environment}}%
+      \endlist}
+\makeatother
+
+\makeatletter
+\renewcommand\maketitle{
+  \linespread{.67}
+  \pagecolor{Titelhintergrundfarbe}\afterpage{\nopagecolor}
+  \vspace*{8cm}
+  \begin{flushleft}
+    \Huge\bfseries\textcolor{blue}{\@title}
+    \textcolor{blue}{\rule[1mm]{\linewidth}{4pt}}\\
+    \vspace{3.5mm}
+    \huge\bfseries\textcolor{blue}{\@subtitle}
+  \end{flushleft}
+  \linespread{1}
+  \newpage
+}
+\makeatother
