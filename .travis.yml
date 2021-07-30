@@ -16,6 +16,10 @@ script:
 - pdflatex Simpsons-IT.tex
 - pdflatex Simpsons-IT_article.tex
 - pdflatex Simpsons-IT_article.tex
+- pdflatex Simpsons-IT_FF_Edition.tex
+- pdflatex Simpsons-IT_FF_Edition.tex
+- pdflatex Simpsons-IT_FF_Edition_article.tex
+- pdflatex Simpsons-IT_FF_Edition_article.tex
 deploy:
   provider: releases
   token:
@@ -23,10 +27,13 @@ deploy:
   file: 
     - Simpsons-IT.pdf
     - Simpsons-IT_article.pdf
+    - Simpsons-IT_FF_Edition.pdf
+    - Simpsons-IT_FF_Edition_article.pdf
   cleanup: true
   draft: false
   prerelease: true
   overwrite: true
+  skip_cleanup: true
   on:
     tags: true
     repo: mflingelli/Simpsons-IT
