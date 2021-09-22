@@ -27,7 +27,6 @@ deploy:
   - Simpsons-IT_article.pdf
   - Simpsons-IT_FF_Edition.pdf
   - Simpsons-IT_FF_Edition_article.pdf
-  cleanup: true
   draft: false
   prerelease: true
   overwrite: true
