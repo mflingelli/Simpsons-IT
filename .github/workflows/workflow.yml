@@ -10,7 +10,7 @@ jobs:
         uses: xu-cheng/texlive-action/full@v1
         with:
           run: |
-            apt-get install -y --no-install-recommends git
+            apk add git
             git clone https://github.com/matze/mtheme.git
             cd mtheme
             make sty
