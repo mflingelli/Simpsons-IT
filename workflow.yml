@@ -1,0 +1,36 @@
+name: Simpsons-IT
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: TexLive compilation
+        uses: xu-cheng/texlive-action/full@v1
+        with:
+          run: |
+            git clone https://github.com/matze/mtheme.git
+            cd mtheme
+            make sty
+            cp *.sty ../
+            cd ../
+            pdflatex Simpsons-IT.tex
+            pdflatex Simpsons-IT.tex
+            pdflatex Simpsons-IT_article.tex
+            pdflatex Simpsons-IT_article.tex
+            pdflatex Simpsons-IT_FF_Edition.tex
+            pdflatex Simpsons-IT_FF_Edition.tex
+            pdflatex Simpsons-IT_FF_Edition_article.tex
+            pdflatex Simpsons-IT_FF_Edition_article.tex
+      - name: Draft release
+        uses: softprops/action-gh-release@v1
+        with:
+          draft: true
+          files: |
+            Simpsons-IT.pdf
+            Simpsons-IT_article.pdf
+            Simpsons-IT_FF_Edition.pdf
+            Simpsons-IT_FF_Edition_article.pdf
+
+
