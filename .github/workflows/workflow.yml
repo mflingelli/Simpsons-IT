@@ -7,29 +7,26 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: TeXLive installation
-        with:
-          run: |
-            sudo apt-get -qq update
-            sudo apt-get install -y --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended texlive-lang-german latex-beamer git
+        run: |
+          sudo apt-get -qq update
+          sudo apt-get install -y --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended texlive-lang-german latex-beamer git
       - name: Prepartion of mtheme
-        with:
-          run: |
-            git clone https://github.com/matze/mtheme.git
-            cd mtheme
-            make sty
-            cp *.sty ../
-            cd ../
+        run: |
+          git clone https://github.com/matze/mtheme.git
+          cd mtheme
+          make sty
+          cp *.sty ../
+          cd ../
       - name: LaTeX compilation
-        with:
-          run: |
-            pdflatex Simpsons-IT.tex
-            pdflatex Simpsons-IT.tex
-            pdflatex Simpsons-IT_article.tex
-            pdflatex Simpsons-IT_article.tex
-            pdflatex Simpsons-IT_FF_Edition.tex
-            pdflatex Simpsons-IT_FF_Edition.tex
-            pdflatex Simpsons-IT_FF_Edition_article.tex
-            pdflatex Simpsons-IT_FF_Edition_article.tex
+        run: |
+          pdflatex Simpsons-IT.tex
+          pdflatex Simpsons-IT.tex
+          pdflatex Simpsons-IT_article.tex
+          pdflatex Simpsons-IT_article.tex
+          pdflatex Simpsons-IT_FF_Edition.tex
+          pdflatex Simpsons-IT_FF_Edition.tex
+          pdflatex Simpsons-IT_FF_Edition_article.tex
+          pdflatex Simpsons-IT_FF_Edition_article.tex
       - name: Draft release
         uses: softprops/action-gh-release@v1
         with:
