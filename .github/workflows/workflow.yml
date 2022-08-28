@@ -11,6 +11,7 @@ jobs:
         with:
           run: |
             apk add git
+            apk add texlive-fonts-extra
             git clone https://github.com/matze/mtheme.git
             cd mtheme
             make sty
