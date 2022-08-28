@@ -19,14 +19,14 @@ jobs:
           cd ../
       - name: LaTeX compilation
         run: |
-          pdflatex Simpsons-IT.tex
-          pdflatex Simpsons-IT.tex
-          pdflatex Simpsons-IT_article.tex
-          pdflatex Simpsons-IT_article.tex
-          pdflatex Simpsons-IT_FF_Edition.tex
-          pdflatex Simpsons-IT_FF_Edition.tex
-          pdflatex Simpsons-IT_FF_Edition_article.tex
-          pdflatex Simpsons-IT_FF_Edition_article.tex
+          pdflatex Simpsons-IT.tex > /dev/null 2>&1
+          pdflatex Simpsons-IT.tex > /dev/null 2>&1
+          pdflatex Simpsons-IT_article.tex > /dev/null 2>&1
+          pdflatex Simpsons-IT_article.tex > /dev/null 2>&1
+          pdflatex Simpsons-IT_FF_Edition.tex > /dev/null 2>&1
+          pdflatex Simpsons-IT_FF_Edition.tex > /dev/null 2>&1
+          pdflatex Simpsons-IT_FF_Edition_article.tex > /dev/null 2>&1
+          pdflatex Simpsons-IT_FF_Edition_article.tex > /dev/null 2>&1
       - name: Draft release
         uses: softprops/action-gh-release@v1
         with:
