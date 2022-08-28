@@ -1,6 +1,6 @@
 # Simpsons-IT
 
-[![Build Status](https://travis-ci.com/mflingelli/Simpsons-IT.svg?branch=master)](https://app.travis-ci.com/github/mflingelli/Simpsons-IT)
+![](https://github.com/mflingelli/simpsons-it/actions/workflows/workflow.yml/badge.svg)
 
 Der Vortrag stellt eine humoristische Verbindung zwischen den Simpsons und der mathematischen Realität dar.
 
