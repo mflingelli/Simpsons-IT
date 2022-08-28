@@ -2,20 +2,25 @@ name: Simpsons-IT
 on: [push]
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: TexLive compilation
-        uses: xu-cheng/texlive-action/full@v1
+      - name: TeXLive installation
         with:
           run: |
-            apk add git texmf-dist
+            sudo apt-get -qq update
+            sudo apt-get install -y --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended texlive-lang-german latex-beamer git
+      - name: Prepartion of mtheme
+          run: |
             git clone https://github.com/matze/mtheme.git
             cd mtheme
             make sty
             cp *.sty ../
             cd ../
+      - name: LaTeX compilation
+        with:
+          run: |
             pdflatex Simpsons-IT.tex
             pdflatex Simpsons-IT.tex
             pdflatex Simpsons-IT_article.tex
