@@ -9,7 +9,7 @@ jobs:
       - name: TeXLive installation
         run: |
           sudo apt-get -qq update
-          sudo apt-get install -y --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended texlive-lang-german git
+          sudo apt-get install -y --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended texlive-lang-german texlive-plain-generic
       - name: Prepartion of mtheme
         run: |
           git clone https://github.com/matze/mtheme.git
@@ -30,14 +30,14 @@ jobs:
       - name: Generate pre-release tag
         id: tag
         run: |
-          echo "::set-output name=release_tag::Entwurf"
+          echo "RELEASE_TAG=Entwurf" >> $GITHUB_ENV
       - name: Provide pre-release
         uses: softprops/action-gh-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           prerelease: true
-          tag_name: ${{ steps.tag.outputs.release_tag }}
+          tag_name: ${{ env.RELEASE_TAG }}
           files: |
             Simpsons-IT.pdf
             Simpsons-IT_article.pdf
