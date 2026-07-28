@@ -111,8 +111,8 @@ Halloween-Folge der 26. Staffel (Treehouse of Horror XXV)
 \begin{itemize}
 	\item Datei mit der ersten Million Nachkommastellen von $\pi$: \href{http://www.aip.de/~wasi/PI/Pibel/pibel_10mio.pdf}{\url{http://www.aip.de/~wasi/PI/Pibel/pibel\_10mio.pdf}}
 	\item Der Rekord im Memorieren lag zum Zeitpunkt der Entstehung der Folge bei ca. 40.000 Nachkommastellen.
-	\item Den aktuellen Weltrekord im Memorieren der Zahl PI hält der Inder Suresh Kumar Sharma mit aufgesagten 70.030 Nachkommastellen. Aufgestellt wurde der Rekord am 21 Oktober 2015. Die Vortragsdauer lag bei gut 17 Stunden (siehe \href{https://www.pi-world-ranking-list.com/?page=lists&category=pi}{\url{https://www.pi-world-ranking-list.com/?page=lists&category=pi}})
-	\item  Die Pointe mit der tatsächlichen 40.000. Stelle von Pi war jedoch eine Herausforderung für die Drehbuchautoren, da sie 1993 nicht einfach die bekannten Stellen googeln konnten. Der NASA-Mathematiker David Bailey half aus, indem er eine gedruckte Kopie der ersten 40.000 Nachkommastellen von Pi schickte, um zu bestätigen, dass die letzte Ziffer tatsächlich 1 ist.
+	\item Den aktuellen Weltrekord im Memorieren der Zahl $\pi$ hält der Inder Suresh Kumar Sharma mit aufgesagten 70.030 Nachkommastellen. Aufgestellt wurde der Rekord am 21 Oktober 2015. Die Vortragsdauer lag bei gut 17 Stunden (siehe \href{https://www.pi-world-ranking-list.com/?page=lists&category=pi}{\url{https://www.pi-world-ranking-list.com/?page=lists&category=pi}})
+	\item  Die Pointe mit der tatsächlichen 40.000. Stelle von $\pi$ war jedoch eine Herausforderung für die Drehbuchautoren, da sie 1993 nicht einfach die bekannten Stellen googeln konnten. Der NASA-Mathematiker David Bailey half aus, indem er eine gedruckte Kopie der ersten 40.000 Nachkommastellen von $\pi$ schickte, um zu bestätigen, dass die letzte Ziffer tatsächlich 1 ist.
 \end{itemize}
 
 }
@@ -666,15 +666,25 @@ Sei $n > 2$ eine natürliche Zahl, dann gibt es keine von Null verschiedenen nat
 }
 
 \only<article>{
-\noindent\Hinweis[0.975\textwidth]{t}{Anmerkungen}{% 
-\begin{itemize}
-	\item Beweis durch Widerspruch
-	\item Sei $a = 9$ und $b = 4$
-\end{itemize}
-\begin{align*}
-	\sqrt{9} + \sqrt{9} &\neq \sqrt{4}\\
-	\sqrt{9} + \sqrt{4} &\neq \sqrt{9}
-\end{align*}
+\noindent\Hinweis[0.975\textwidth]{t}{Anmerkung}{% 
+
+Da $a > 0$ ist, gilt stets $4a > a$. Da $c = 4a$ ist, folgt daraus:
+\begin{equation}
+	b = 4a > a \implies c > a \implies a \neq c
+\end{equation}
+
+Für jedes gültige Dreieck mit den Seitenlängen $a$, $a$ und $c$ muss nach der \textbf{Dreiecksungleichung} gelten, dass die Summe zweier Seiten streng größer ist als die dritte Seite:
+\begin{equation}
+	a + a > c \iff 2a > c
+\end{equation}
+
+Da aus Homers Aussage jedoch $c = 4a$ folgt, ergibt sich durch Einsetzen:
+\begin{align}
+	2a &> 4a && \mid \, : a \quad (\text{da } a > 0) \\
+	2 &> 4 \quad \text{\textbf{(Widerspruch!)}}
+\end{align}
+
+\textbf{Fazit:} Die Bedingung $c = 4a$ verletzt die Dreiecksungleichung. Es kann somit kein geschlossenes Dreieck existieren, das diese Gleichung erfüllt.
 }
 }
 
@@ -730,7 +740,7 @@ Sei $n > 2$ eine natürliche Zahl, dann gibt es keine von Null verschiedenen nat
 	\item Gedankenexperiment Hilberts Hotel:
 	\begin{itemize}
 		\item Hotel mit unendlich vielen Zimmern (durchnummeriert mit natürlichen Zahlen bei 1 beginnend)
-		\item Hotel ist mit unendlich vielen Gästen belegt, trotzdem können abzählbar unendlich viele Neuankömmlinge aufgenommen werden: Alle Zimmer mit geraden Zimmernummern werden freigemacht und neue Gäste wird in diesen untergebracht
+		\item Hotel ist mit unendlich vielen Gästen belegt, trotzdem können abzählbar unendlich viele Neuankömmlinge aufgenommen werden: Alle Zimmer mit geraden Zimmernummern werden freigemacht und neue Gäste werden in diesen untergebracht.
 	\end{itemize}
 \end{itemize}
 }
